@@ -1,27 +1,14 @@
-import java.util.Scanner;
-
 public class Menu {
     private int choice;
-
-    private boolean exit = false;
-
+    
     public void runMenu() {
         printHeader();
-        do {
-            printMenu();
-            readChoice();
-        } while (!exit);
+        printMenu();
+        readChoice();
     }
 
     private void readChoice() {
-        Scanner sc = new Scanner(System.in);
-        choice = sc.nextInt();
-        while (choice < 1 || choice > 3) {
-            System.out.println("Πληκρολογήστε ξανά...\n"); /* εμφανιση μενου παλι */
-            choice = sc.nextInt();
-        }
-        exit = true;
-        sc.close();
+        choice = Input.getInput(1, 3);
     }
 
     public  int getChoice() {

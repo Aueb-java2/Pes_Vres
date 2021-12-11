@@ -85,22 +85,15 @@ public class Choices {
     }
 
     private static void readNoOfCategories() {
-        Scanner sc = new Scanner(System.in);
         System.out.print("Παρακαλώ πληκτρολογήστε τον αριθμό των κατηγοριών...");
-        noOfCategories = sc.nextInt();
-        while (noOfCategories < 1 || noOfCategories > 4) {
-            System.out.println("Πληκρολογήστε ξανά...\n");
-            noOfCategories = sc.nextInt();
-        }
-        
+        noOfCategories = Input.getInput(1, 4);
     }
-
+    
     private static void readNames() {
-        Scanner in = new Scanner(System.in);
         System.out.print("Παρακαλώ πληκρολογήστε το όνομα της ομάδας1...\n");
-        name1 = in.nextLine();
+        name1 = Input.getInput();
         System.out.println("Παρακαλώ πληκρολογήστε το όνομα της ομάδας2...");
-        name2 = in.nextLine();
+        name2 = Input.getInput();
         
     }
 
@@ -124,13 +117,18 @@ public class Choices {
     }
 
     private static void readRoundSeconds() {
-        Scanner sc = new Scanner(System.in);
-        roundSeconds = sc.nextInt();
-        while (roundSeconds < 1 || roundSeconds > 3) {
-            System.out.println("Πληκρολογήστε ξανά...\n");
-            roundSeconds = sc.nextInt();
+        int choice = Input.getInput(1, 3);
+        switch (choice) {
+            case 1:
+                roundSeconds = 45;
+                break;
+            case 2:
+                roundSeconds = 60;
+                break;
+            default:
+                roundSeconds = 75;
+                break;
         }
-        
     }
     
 }

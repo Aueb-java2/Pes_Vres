@@ -81,8 +81,8 @@ public class Game {
         var team1 = new Team(Choices.getName1(), 0);
         var team2 = new Team(Choices.getName2(), 0);
         for (int i = 0; i < NO_OF_ROUNDS; i++) {
-            System.out.println("Round no" + i + "for team" + team1.getName());
             String category = pickCategory();
+            System.out.println("Round no" + i + "for team" + team1.getName());
             Round.runRound(roundSeconds, category);
             System.out.println("Round no" + i + "for team" + team2.getName());
             Round.runRound(roundSeconds, category);
