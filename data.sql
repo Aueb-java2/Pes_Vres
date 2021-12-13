@@ -122,3 +122,138 @@ INSERT INTO Choice (Answer, Points, QuestionID) VALUES ('Παλιούρι', 2, '
 INSERT INTO Choice (Answer, Points, QuestionID) VALUES ('Σκύλλαιο', 3, 'Γ10');
 INSERT INTO Choice (Answer, Points, QuestionID) VALUES ('Κάβο Σίδερο', 3, 'Γ10');
 INSERT INTO Choice (Answer, Points, QuestionID) VALUES ('Άκτιο', 4, 'Γ10');
+
+
+/* History Questions 11-20 
+INSERT INTO question VALUES ('Ι11', '10 αγωνιστές της Ελληνικής επανάστασης, 'Ιστορία');
+INSERT INTO question VALUES ('Ι12', '10 εθνοσυνελεύσεις στην Ελλάδα', 'Ιστορία');
+INSERT INTO question VALUES ('Ι13', '10 γνωστοί Φιλέλληνες ', 'Ιστορία');
+INSERT INTO question VALUES ('Ι14', Διαφωτιστές/Εκπρόσωποι και Ιδέες του Νεοελληνικού Διαφωτισμού ', 'Ιστορία');
+INSERT INTO question VALUES ('Ι15', ‘Ποια ήταν τα αντίπαλα στρατόπεδα του Α Παγκοσμίου πολέμου', 'Ιστορία');
+INSERT INTO question VALUES ('Ι16', '10 Ηγέτες της Ελλάδας στην Απόλυτη και Συνταγματική μοναρχία (1833-1862) ', 'Ιστορία');
+INSERT INTO question VALUES ('Ι17', ’10 Αυτοκράτορες του Βυζαντίου', 'Ιστορία');
+INSERT INTO question VALUES ('Ι18', ’10 Λέξεις σχετικά με την Σπάρτη στην Αρχαϊκή Εποχή , 'Ιστορία');
+INSERT INTO question VALUES ('Ι19', '10 Λέξεις σχετικά με την Μινωική Εποχή ', 'Ιστορία');
+INSERT INTO question VALUES ('Ι20', '10 Έλληνες ιστορικοί και φιλόσοφοι', 'Ιστορία');
+
+INSERT INTO choice (Answer, Points, questionID) VALUES ('Θεόδωρος Κολοκοτρώνης', 1, 'Ι11');
+INSERT INTO choice (Answer, Points, questionID) VALUES ('Γεώργιος Καραϊσκάκης', 1, 'Ι11);
+INSERT INTO choice (Answer, Points, questionID) VALUES ('Αθανάσιος Διάκος', 1, 'Ι11');
+INSERT INTO choice (Answer, Points, questionID) VALUES ('Παπαφλέσσας', 1, 'Ι11');
+INSERT INTO choice (Answer, Points, questionID) VALUES (‘Μάρκος Μπότσαρης', 2, 'Ι11');
+INSERT INTO choice (Answer, Points, questionID) VALUES ('Οδυσσέας Ανδρούτσος', 2, 'Ι11');
+INSERT INTO choice (Answer, Points, questionID) VALUES ('Μαντώ Μαυρογένους', 2, 'Ι01');
+INSERT INTO choice (Answer, Points, questionID) VALUES ('Λασκαρίνα Μπουμπουλίνα', 3, 'Ι01');
+INSERT INTO choice (Answer, Points, questionID) VALUES ('Κωνσταντίνος Κανάρης', 3, 'Ι01');
+INSERT INTO choice (Answer, Points, questionID) VALUES ('Ανδρέας Μιαούλης', 4, 'Ι01');
+
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Α' Εθνοσυνέλευση Επιδαύρου 1821 ', 1, 'Ι12');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Β' Εθνοσυνέλευση Άστρους 1823 ', 1, 'Ι12');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (‘Γ' Εθνοσυνέλευση Επιδαύρου 1826’, 1, 'Ι12');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (‘Γ' Εθνοσυνέλευση Ερμιόνης 1827’, 1, 'Ι12');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Γ' Εθνοσυνέλευση Τροιζήνας 1827 ', 2, 'Ι12');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Δ' Εθνοσυνέλευση Άργους 1829 ', 2, 'Ι12');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Ε' Εθνοσυνέλευση Ναυπλίου 1832 ', 2, 'Ι12');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Συνέλευση του Μεσολογγίου 1823 ', 3, 'Ι12');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Συνέλευση της Βοστίτσας 1821 ', 3, 'Ι12');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Συνέλευση των Σαλώνων  1821 ', 4, 'Ι12');
+
+
+
+INSERT INTO choice (Answer, Points, questionID) VALUES (‘Κάρολος Νόρμαν', 1, 'Ι13');
+INSERT INTO choice (Answer, Points, questionID) VALUES (‘Λόρδος Βύρωνας', 1, 'Ι13);
+INSERT INTO choice (Answer, Points, questionID) VALUES (‘Τζωρτζ Κάνινγκ', 1, 'Ι13');
+INSERT INTO choice (Answer, Points, questionID) VALUES (‘Βίκτωρ Ουγκό’, 1, 'Ι13');
+INSERT INTO choice (Answer, Points, questionID) VALUES (‘Τόμας Γκόρντον', 2, 'Ι13');
+INSERT INTO choice (Answer, Points, questionID) VALUES ('Λουδοβίκος Α’ της Βαυαρίας ‘, 2, 'Ι13');
+INSERT INTO choice (Answer, Points, questionID) VALUES (Τζωρτζ Τζάρβις,, 2, 'Ι13');
+INSERT INTO choice (Answer, Points, questionID) VALUES (‘Μαξίμ Ρεμπώ', 3, 'Ι13');
+INSERT INTO choice (Answer, Points, questionID) VALUES ('Αλεξάντρ Πούσκιν ', 3, 'Ι13');
+INSERT INTO choice (Answer, Points, questionID) VALUES (‘Μπρούνο’, 4, 'Ι13');
+
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (''Τζον Λοκ', 1, 'Ι14');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Ρουσό ', 1, 'Ι14');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (‘Μοντεσκιέ ', 1, 'Ι14');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Ντιντερό ', 1, 'Ι14');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Βολτέρος', 2, 'Ι14');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Ντ’ Αλαμπέρ', 2, 'Ι14');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Γενική βούληση ', 2, 'Ι14');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Απόρριψη κάθε αυθεντίας', 3, 'Ι14');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Θεωρία του κοινωνικού συμβολαίου ', 3, 'Ι14');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (Διάκριση των εξουσιών, 4, 'Ι14');
+
+
+
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Κεντρικές δυνάμεις', 1, 'Ι15');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Τριπλή Συμμαχία', 1, 'Ι15');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Γερμανία', 1, 'Ι15');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Αυστροουγγαρία', 1, 'Ι15');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (‘Ιταλία', 2, 'Ι15');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Βρετανία', 2, 'Ι15');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Γαλλία', 2, 'Ι15');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Ρωσία', 3, 'Ι15');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Εγκάρδια ή Τριπλή Συνεννόηση ', 3, 'Ι15');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Αντάντ/ Entente Cordiale ', 4, 'Ι15');
+
+
+
+
+
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Σπυρίδων Τρικούπης', 1, 'Ι16');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (‘Αλέξανδρος Μαυροκορδάτος’, 1, 'Ι16');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Ιωάννης Κωλέττης ', 1, 'Ι16');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Κόμης Ιωσήφ Λουδοβίκος Άρμανσπεργκ ', 1, 'Ι16');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Βασιλεύς Όθων ', 2, 'Ι16');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Γεώργιος Κουντουριώτης ', 2, 'Ι16');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Κίτσος Τζαβέλας ', 2, 'Ι16');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (‘Κωνσταντίνος Κανάρης’, 3, 'Ι16');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Δημήτριος Βούλγαρης ς', 3, 'Ι16');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Αντώνιος Κριεζής ', 4, 'Ι16');
+
+
+
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Κωνσταντίνος Α΄ ', 1, 'Ι17');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Κωνσταντίνος Β΄ ', 1, 'Ι17');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Ρωμανός Α’ ’ ', 1, 'Ι17');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Θεοδίσιος Α’ ', 1, 'Ι17');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Λέων Α’ ', 2, 'Ι17');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Ιουστίνος Α’ ', 2, 'Ι17');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Μαυρίκιος', 2, 'Ι17');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Τιβέριος Β’ ', 3, 'Ι17');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Ιουστινιανός Α’ ', 3, 'Ι17');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Λεόντιος ', 4, 'Ι17');
+
+
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Μέλας ζωμός ', 1, 'Ι18');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Βασιλιάς Λεωνίδας, 1, 'Ι18');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (‘Ασπίδα και δόρυ', 1, 'Ι18');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Δύο βασιλείς ', 1, 'Ι18');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Περίοικοι ', 2, 'Ι18');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Είλωτες/ δούλοι ', 2, 'Ι18');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Γερουσία ', 2, 'Ι18');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Πέντε έφοροι'', 3, 'Ι18');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Λακωνισμός ', 3, 'Ι18');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Νομοθέτης Λυκούργος', 4, 'Ι18');
+
+
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Ανάκτορο στην Κνωσό', 1, 'Ι19');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Ανάκτορο στην Φαιστό', 1, 'Ι19');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Ανάκτορο στα Μάλλια ', 1, 'Ι19');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Ανάκτορο στη Ζάκρο ', 1, 'Ι19');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Κοσμήματα', 2, 'Ι19');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Τοιχογραφίες', 2, 'Ι19');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Ειδώλια', 2, 'Ι19');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Γραμμική Α', 3, 'Ι19');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Ο δίσκος της Φαιστού ', 3, 'Ι19');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES (' Πολύχρωμα καμαραϊκά ', 4, 'Ι19');
+
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Θουκυδίδης', 1, 'Ι20');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Ξενοφών', 1, 'Ι20');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Πλούταρχος', 1, 'Ι20');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Ηρόδοτος', 1, 'Ι20');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Σωκράτης', 2, 'Ι20');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Πλάτωνας', 2, 'Ι20');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Αριστοτέλης', 2, 'Ι20');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Ηράκλειτος', 3, 'Ι20');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Θαλής ο Μιλήσιος', 3, 'Ι20');
+INSERT INTO choice (Answer, Points, QuestionID) VALUES ('Πολύβιος', 4, 'Ι20');
