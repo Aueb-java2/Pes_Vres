@@ -77,9 +77,9 @@ public class Game {
         }
     }
     
-    public void runGame() {
-        var team1 = new Team(Choices.getName1(), 0);
-        var team2 = new Team(Choices.getName2(), 0);
+    public void runGame(String name1, String name2 ) {
+        var team1 = new Team(name1, 0);
+        var team2 = new Team(name2, 0);
         for (int i = 0; i < NO_OF_ROUNDS; i++) {
             String category = pickCategory();
             System.out.println("Round no" + i + "for team" + team1.getName());

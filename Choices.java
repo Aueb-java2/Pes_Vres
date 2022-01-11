@@ -1,23 +1,21 @@
-import java.util.Scanner;
-
 public class Choices {
-    private static String name1;
+    private String name1;
 
-    private static String name2;
+    private String name2;
 
-    private static int roundSeconds;
+    private int roundSeconds;
 
-    private static int noOfCategories;
+    private int noOfCategories;
 
-    private static int category1;
+    private int category1;
 
-    private static int category2;
+    private int category2;
 
-    private static int category3;
+    private int category3;
 
-    private static int category4;
+    private int category4;
 
-    public static void runChoices() {
+    public void runChoices() {
         readNames();
         printSecondsChoices();
         readRoundSeconds();
@@ -41,8 +39,7 @@ public class Choices {
         return category4;
     }
 
-    private static void readCategories() {
-        Scanner sc = new Scanner(System.in);
+    private  void readCategories() {
         System.out.println("1. Ελληνική Μυθολογία");
         System.out.println("2. Ελληνικός Πολιτισμός");
         System.out.println("3. Ελληνική Γεωγραφία");
@@ -50,31 +47,31 @@ public class Choices {
         switch (noOfCategories) {
         case 1:
             System.out.println("Παρακαλώ επιλέξτε τον αριθμό της πρώτης κατηγορίας");
-            category1 = sc.nextInt();
+            category1 = Input.getInput(1, 4);
             break;
         case 2:
             System.out.println("Παρακαλώ επιλέξτε τον αριθμό της πρώτης κατηγορίας");
-            category1 = sc.nextInt();
+            category1 = Input.getInput(1, 4);
             System.out.println("Παρακαλώ επιλέξτε τον αριθμό της δεύτερης κατηγορίας");
-            category2 = sc.nextInt();
+            category2 = Input.getInput(1, 4);
             break;
         case 3:
             System.out.println("Παρακαλώ επιλέξτε τον αριθμό της πρώτης κατηγορίας");
-            category1 = sc.nextInt();
+            category1 = Input.getInput(1, 4);
             System.out.println("Παρακαλώ επιλέξτε τον αριθμό της δεύτερης κατηγορίας");
-            category2 = sc.nextInt();
+            category2 = Input.getInput(1, 4);
             System.out.println("Παρακαλώ επιλέξτε τον αριθμό της τρίτης κατηγορίας");
-            category3 = sc.nextInt();
+            category3 = Input.getInput(1, 4);
             break;
         default:
             System.out.println("Παρακαλώ επιλέξτε τον αριθμό της πρώτης κατηγορίας");
-            category1 = sc.nextInt();
+            category1 = Input.getInput(1, 4);
             System.out.println("Παρακαλώ επιλέξτε τον αριθμό της δεύτερης κατηγορίας");
-            category2 = sc.nextInt();
+            category2 = Input.getInput(1, 4);
             System.out.println("Παρακαλώ επιλέξτε τον αριθμό της τρίτης κατηγορίας");
-            category3 = sc.nextInt();
+            category3 = Input.getInput(1, 4);
             System.out.println("Παρακαλώ επιλέξτε τον αριθμό της τέταρτης κατηγορίας");
-            category4 = sc.nextInt();
+            category4 = Input.getInput(1, 4);
             break;
         }
         
@@ -84,39 +81,39 @@ public class Choices {
         return noOfCategories;
     }
 
-    private static void readNoOfCategories() {
+    private void readNoOfCategories() {
         System.out.print("Παρακαλώ πληκτρολογήστε τον αριθμό των κατηγοριών...");
         noOfCategories = Input.getInput(1, 4);
     }
     
-    private static void readNames() {
+    private void readNames() {
         System.out.print("Παρακαλώ πληκρολογήστε το όνομα της ομάδας1...\n");
-        name1 = Input.getInput();
+        name1 = Input.getStringInput();
         System.out.println("Παρακαλώ πληκρολογήστε το όνομα της ομάδας2...");
-        name2 = Input.getInput();
+        name2 = Input.getStringInput();
         
     }
 
-    public static String getName1() {
+    public  String getName1() {
         return name1;
     }
 
-    public static String getName2() {
+    public  String getName2() {
         return name2;
     }
 
-    public int getRoundSeconds() {
+    public int  getRoundSeconds() {
         return roundSeconds;
     }
 
-    private static void printSecondsChoices() {
+    private void printSecondsChoices() {
         System.out.println("Παρακαλώ επιλέξτε τα δευτερόλεπτα κάθε γύρου...\n");
         System.out.println("1. 45 δευτερόλεπτα");
         System.out.println("2. 60 δευτερόλεπτα");
         System.out.println("3. 75 δευτερόλεπτα");
     }
 
-    private static void readRoundSeconds() {
+    private void readRoundSeconds() {
         int choice = Input.getInput(1, 3);
         switch (choice) {
             case 1:
