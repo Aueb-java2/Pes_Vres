@@ -8,13 +8,8 @@ public class Team {
         this.score = score;
     }
 
-    public static void addScore(int score) {
-
-    }
-
-    @Override
-    public String toString() {
-        return "Team [name=" + name + ", score=" + score + "]";
+    public void addScore(int score) {
+        this.score += score;
     }
 
     public String getName() {

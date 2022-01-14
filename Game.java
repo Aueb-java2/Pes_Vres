@@ -3,89 +3,73 @@ public class Game {
 
     private int noOfCategories;
 
-    private String category1;
-
-    private String category2;
-
-    private String category3;
-
-    private String category4;
+    private int[] categories;
 
     private final int NO_OF_ROUNDS = 10;
     
     private int count = 0;
 
-    public Game(int roundSeconds, String category1) {
-        this.roundSeconds = roundSeconds;
-        this.category1 = category1;
+    private String name1;
+    
+    private String name2;
+
+    public Game(Choices c) {
+        this.roundSeconds = c.getRoundSeconds();
+        this.noOfCategories = c.getNoOfCategories();
+        this.categories = c.getCategories();
+        this.name1 = c.getName1();
+        this.name2 = c.getName2();
     }
 
-    public Game(int roundSeconds, String category1, String category2) {
-        this.roundSeconds = roundSeconds;
-        this.category1 = category1;
-        this.category2 = category2;
-    }
-
-    public Game(int roundSeconds, String category1, String category2, String category3) {
-        this.roundSeconds = roundSeconds;
-        this.category1 = category1;
-        this.category2 = category2;
-        this.category3 = category3;
-    }
-
-    public Game(int roundSeconds, int noOfCategories, String category1, String category2, String category3, String category4) {
-        this.roundSeconds = roundSeconds;
-        this.noOfCategories = noOfCategories;
-        this.category1 = category1;
-        this.category2 = category2;
-        this.category3 = category3;
-        this.category4 = category4;
-    }
-
-    private String pickCategory() {
+    private int pickCategory() {
         count++;
         switch (noOfCategories) {
             case 1:
-                return category1;
+                return categories[0];
             case 2:
                 switch (count % 2) {
                     case 1:
-                        return category1;                
+                        return categories[0];              
                     default:
-                        return category2;
+                        return categories[1];
                 }
             case 3:
                 switch (count % 3) {
                     case 2:
-                        return category2;  
+                        return categories[1];  
                     case 1:
-                        return category1;
+                        return categories[0];
                     default:
-                        return category4;
-                }        
+                        return categories[2];
+                }
             default:
                 switch (count % 4) {
                     case 3:
-                        return category3;
+                        return categories[2];
                     case 2:
-                        return category2;  
+                        return categories[1];  
                     case 1:
-                        return category1;
+                        return categories[0];
                     default:
-                        return category4;
+                        return categories[3];
             }
         }
     }
     
-    public void runGame(String name1, String name2 ) {
+    public void runGame() {
         var team1 = new Team(name1, 0);
         var team2 = new Team(name2, 0);
+        int category;
         for (int i = 0; i < NO_OF_ROUNDS; i++) {
-            String category = pickCategory();
-            System.out.println("Round no" + i + "for team" + team1.getName());
-            Round.runRound(roundSeconds, category);
-            System.out.println("Round no" + i + "for team" + team2.getName());
-            Round.runRound(roundSeconds, category);
+            category = pickCategory();
+            System.out.println("Γύρος νούμενο " + (i + 1) + " για την ομάδα " + name1);
+            var r1 = new Round(roundSeconds, category);
+            r1.runRound();
+            team1.addScore(r1.getRoundScore());
+            System.out.println("Γύρος νούμενο " + (i + 1) + " για την ομάδα " + name2);
+            var r2 = new Round(roundSeconds, category);
+            r2.runRound();
+            team2.addScore(r2.getRoundScore());
         }
         printWinner(team1.getScore(), team2.getScore(), team1.getName(), team2.getName());
     }

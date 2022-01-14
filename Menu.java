@@ -2,7 +2,6 @@ public class Menu {
     private int choice;
     
     public void runMenu() {
-        printHeader();
         printMenu();
         readChoice();
     }
@@ -15,7 +14,7 @@ public class Menu {
         return choice;
     }
 
-    private void printHeader() {
+    public void printHeader() {
         System.out.println("*-------------------------------*");
         System.out.println("*       Καλώς ορίσατε στο       *");
         System.out.println("*           ΠΕΣ ΒΡΕΣ            *");

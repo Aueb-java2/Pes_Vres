@@ -7,13 +7,7 @@ public class Choices {
 
     private int noOfCategories;
 
-    private int category1;
-
-    private int category2;
-
-    private int category3;
-
-    private int category4;
+    private int[] categories;
 
     public void runChoices() {
         readNames();
@@ -23,20 +17,8 @@ public class Choices {
         readCategories();
     }
 
-    public int getCategory1() {
-        return category1;
-    }
-
-    public int getCategory2() {
-        return category2;
-    }
-
-    public int getCategory3() {
-        return category3;
-    }
-
-    public int getCategory4() {
-        return category4;
+    public int[] getCategories() {
+        return categories;
     }
 
     private  void readCategories() {
@@ -44,37 +26,19 @@ public class Choices {
         System.out.println("2. Ελληνικός Πολιτισμός");
         System.out.println("3. Ελληνική Γεωγραφία");
         System.out.println("4. Ελληνική Ιστορία");
-        switch (noOfCategories) {
-        case 1:
-            System.out.println("Παρακαλώ επιλέξτε τον αριθμό της πρώτης κατηγορίας");
-            category1 = Input.getInput(1, 4);
-            break;
-        case 2:
-            System.out.println("Παρακαλώ επιλέξτε τον αριθμό της πρώτης κατηγορίας");
-            category1 = Input.getInput(1, 4);
-            System.out.println("Παρακαλώ επιλέξτε τον αριθμό της δεύτερης κατηγορίας");
-            category2 = Input.getInput(1, 4);
-            break;
-        case 3:
-            System.out.println("Παρακαλώ επιλέξτε τον αριθμό της πρώτης κατηγορίας");
-            category1 = Input.getInput(1, 4);
-            System.out.println("Παρακαλώ επιλέξτε τον αριθμό της δεύτερης κατηγορίας");
-            category2 = Input.getInput(1, 4);
-            System.out.println("Παρακαλώ επιλέξτε τον αριθμό της τρίτης κατηγορίας");
-            category3 = Input.getInput(1, 4);
-            break;
-        default:
-            System.out.println("Παρακαλώ επιλέξτε τον αριθμό της πρώτης κατηγορίας");
-            category1 = Input.getInput(1, 4);
-            System.out.println("Παρακαλώ επιλέξτε τον αριθμό της δεύτερης κατηγορίας");
-            category2 = Input.getInput(1, 4);
-            System.out.println("Παρακαλώ επιλέξτε τον αριθμό της τρίτης κατηγορίας");
-            category3 = Input.getInput(1, 4);
-            System.out.println("Παρακαλώ επιλέξτε τον αριθμό της τέταρτης κατηγορίας");
-            category4 = Input.getInput(1, 4);
-            break;
+        categories = new int[noOfCategories]; 
+        int category;
+        System.out.println("Παρακαλώ επιλέξτε τον αριθμό 1ης κατηγορίας");
+        categories[0] = Input.getInput(1, 4);
+        for (int i = 1; i < categories.length; i++) {
+            System.out.println("Παρακαλώ επιλέξτε τον αριθμό " + (i+1) + "ης κατηγορίας");
+            category = Input.getInput(1, 4);
+            while (Search.linearSearch(categories, category) != -1) {
+                System.out.println("Έχετε ήδη πληκτρολογήσει τον αριθμό αυτής της κατηγορίας");
+                category = Input.getInput(1, 4);
+            }
+            categories[i] = category;
         }
-        
     }
 
     public int getNoOfCategories() {
