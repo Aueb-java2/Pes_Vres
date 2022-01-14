@@ -1,7 +1,5 @@
-import java.io.IOException;
-
 public class Main {
-  public static void main(String[] args) throws IOException, InterruptedException {
+  public static void main(String[] args) {
     //Game game = new Game(60, "category1");
     //game.runGame("gr", "rew");
     //Round.runRound(5, "category");
