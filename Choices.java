@@ -22,6 +22,7 @@ public class Choices {
     }
 
     private  void readCategories() {
+        //database connection
         System.out.println("1. Ελληνική Μυθολογία");
         System.out.println("2. Ελληνικός Πολιτισμός");
         System.out.println("3. Ελληνική Γεωγραφία");
