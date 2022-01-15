@@ -1,3 +1,9 @@
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+import java.awt.GridLayout;
+
 public class Choices {
     private String name1;
 
@@ -8,6 +14,15 @@ public class Choices {
     private int noOfCategories;
 
     private int[] categories;
+    
+    static JFrame scr = new JFrame("Πες/Βρες");
+
+	static void screenChoices() {
+		scr.setBounds(0,0,1280,720);
+		scr.setResizable(false);
+		scr.setLayout(new GridLayout(2,2,10,10));
+		scr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
 
     public void runChoices() {
         readNames();
@@ -52,11 +67,16 @@ public class Choices {
     }
     
     private void readNames() {
-        System.out.print("Παρακαλώ πληκρολογήστε το όνομα της ομάδας1...\n");
-        name1 = Input.getStringInput();
-        System.out.println("Παρακαλώ πληκρολογήστε το όνομα της ομάδας2...");
-        name2 = Input.getStringInput();
-        
+    	JPanel jp = new JPanel();
+    	jp.setLayout(new GridLayout(2,1));
+        JTextField jtf1 = new JTextField("Παρακαλώ πληκρολογήστε το όνομα της ομάδας1...");
+        jtf1.setLayout(new GridLayout(1,1));
+        jp.add(jtf1);
+        JTextField jtf2 = new JTextField("Παρακαλώ πληκρολογήστε το όνομα της ομάδας2...");
+        jtf2.setLayout(new GridLayout(1,1));
+        jp.add(jtf2);
+        scr.add(jp);
+        scr.setVisible(true);
     }
 
     public  String getName1() {
