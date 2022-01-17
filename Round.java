@@ -32,7 +32,7 @@ public class Round {
     			break;
     	}
     	Random r = new Random();
-    	catName = String.format("%s%d", catName, r.nextInt(20) + 1);
+    	catName = String.format("%s%02d", catName, r.nextInt(20) + 1);
     }
 
     public int getRoundScore() {
@@ -47,7 +47,6 @@ public class Round {
         System.out.println("Έχεις " + roundSeconds + " δευτερόλεπτα");
         Countdown c = new Countdown(roundSeconds);
         c.run();
-        //c.getroundScore();
-        //team1addscore
+        roundScore = c.roundScore;
     }
 }
