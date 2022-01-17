@@ -1,12 +1,7 @@
-import java.sql.*;
-
-public class Driver {
-
-	import java.sql.Statement;
+import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-
 
 public class DatabaseConnection {
 
