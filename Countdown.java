@@ -7,25 +7,22 @@ public class Countdown implements Runnable{
 
     private int roundMilliSeconds;
 
-    private int roundScore = 0;
+    public int roundScore = 0;
+    private String catName;
     
     public static String question;
     public static int[] points = new int[10];
     public static String[] answers = new String[10];
 
-    public Countdown(int Seconds){
+    public Countdown(int Seconds, Round r){
         this.roundMilliSeconds = Seconds * 1000;
-    }
-
-    public static void receiveGameQuest() throws SQLException {
-    	Driver.questionDB(Round.catName);
-    	Driver.answerDB(Round.catName);
+        this.catName = r.catName;
     }
 
     public void run(){
         try{
-        	Driver.questionDB(Round.catName);
-        	Driver.answerDB(Round.catName);
+        	Driver.questionDB(catName);
+        	Driver.answerDB(catName);
         	System.out.println("Ερώτηση: " + question);
         	for (int i = 0; i < answers.length; i++) {
         		System.out.printf("%d. %s%n", i + 1, answers[i]);

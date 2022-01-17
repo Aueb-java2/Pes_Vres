@@ -5,7 +5,9 @@ public class Round {
     
     private int category;
     
-    public static String catName;
+    Random r = new Random();
+    
+    String catName;
 
     private int roundScore;
     
@@ -31,7 +33,6 @@ public class Round {
     			catName = "Ι";
     			break;
     	}
-    	Random r = new Random();
     	catName = String.format("%s%02d", catName, r.nextInt(20) + 1);
     }
 
@@ -45,8 +46,10 @@ public class Round {
         System.out.println("Πατήστε enter για να ξεκινήσει ο γύρος");
         Input.getStringInput();
         System.out.println("Έχεις " + roundSeconds + " δευτερόλεπτα");
-        Countdown c = new Countdown(roundSeconds);
+        Countdown c = new Countdown(roundSeconds, this);
         c.run();
         roundScore = c.roundScore;
+        //c.getroundScore();
+        //team1addscore
     }
 }
