@@ -1,18 +1,23 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.sql.*;
 
-public class DBelements {
+public class Queries {
 	
-	public void categories() throws SQLException {
-			
-		Statement myStmt = Driver.connectToDB();
-		ResultSet myRs = null;
+	public static void category() throws SQLException{
 		
-		try {		
-			myRs = myStmt.executeQuery("select * from Category");
-			while (myRs.next()) {
-				System.out.println(myRs.getString(myRs.getString("CategoryName")));
+		List<String> categories= new ArrayList<String>();
+		DatabaseConnection dbcon = new DatabaseConnection();
+		Statement myStmt = null;
+		ResultSet myRs = null;
+	
+		try {	
+			Connection con = dbcon.getConnection();
+			myStmt = con.createStatement();
+			myRs = myStmt.executeQuery("SELECT * FROM Category");
+			while (rs.next()) {
+					categories.add(new String(rs.getString("categoryName")))
 			}
-		}	
 		catch (Exception exc) {
 			exc.printStackTrace();
 		}
@@ -25,7 +30,9 @@ public class DBelements {
 				myStmt.close();
 			}
 		}
+		for (String c : categories){
+			System.out.println(categories.getName());
+		}
 	}
 	
-	/* ������ ������� ��� ��� �������� ��� ��������� ��������� ��� �� ����*/
 }
