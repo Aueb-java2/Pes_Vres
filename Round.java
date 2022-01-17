@@ -49,7 +49,5 @@ public class Round {
         Countdown c = new Countdown(roundSeconds, this);
         c.run();
         roundScore = c.roundScore;
-        //c.getroundScore();
-        //team1addscore
     }
 }

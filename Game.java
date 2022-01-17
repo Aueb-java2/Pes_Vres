@@ -76,11 +76,11 @@ public class Game {
 
     private void printWinner(int score1, int score2, String name1, String name2) {
         if (score1 > score2) {
-            System.out.println("Νικητής η ομάδα" + name1);
+            System.out.println("Νικητής η ομάδα " + name1);
         } else if (score1 == score2) {
             System.out.println("Ισοπαλία");
         } else {
-            System.out.println("Νικητής η ομάδα" + name2);
+            System.out.println("Νικητής η ομάδα " + name2);
         }
     }
 }
