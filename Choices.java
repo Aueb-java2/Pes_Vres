@@ -22,11 +22,10 @@ public class Choices {
     }
 
     private  void readCategories() {
-        //database connection
-        System.out.println("1. Ελληνική Μυθολογία");
-        System.out.println("2. Ελληνικός Πολιτισμός");
-        System.out.println("3. Ελληνική Γεωγραφία");
-        System.out.println("4. Ελληνική Ιστορία");
+        //retrieve category names from database 
+        Queries cat = new Queries();
+        cat.category();
+       
         categories = new int[noOfCategories]; 
         int category;
         System.out.println("Παρακαλώ επιλέξτε τον αριθμό 1ης κατηγορίας");
