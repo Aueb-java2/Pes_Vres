@@ -32,7 +32,7 @@ public class Driver {
 			myStmt.setString(1, s);
 			ResultSet myRs = myStmt.executeQuery();
 			int i = 0;
-			while (myRs.next()) {
+			while (myRs.next() && i < 10) {
 				Countdown.answers[i] = myRs.getString("Answer");
 				Countdown.points[i] = myRs.getInt("Points");
 				i++;
