@@ -1,4 +1,4 @@
-/* Geography Questions 1-10 */
+/* Geography Questions 1-10 sample of the insertions*/
 INSERT INTO Question VALUES ('Γ01', '10 Δήμοι της περιφέρειας Αττικής', 'Γεωγραφία');
 INSERT INTO Question VALUES ('Γ02', '10 ελληνικά νησιά που αρχίζουν από «Κ»', 'Γεωγραφία');
 INSERT INTO Question VALUES ('Γ03', 'Οι 10 μακρύτεροι ποταμοί της Ελλάδας', 'Γεωγραφία');
