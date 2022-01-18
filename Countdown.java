@@ -53,7 +53,7 @@ public class Countdown implements Runnable{
             } else {
                 System.out.println("Απαντήσατε " + count + " ερωτήσεις...");
             }
-            System.out.println("Πήρατε" + roundscore + "σε αυτόν τον γύρο.");
+            System.out.println("Πήρατε " + roundscore + " σε αυτόν τον γύρο.");
         }catch(InterruptedException | IOException | SQLException e){
             System.out.println("Countdown interrupted");
         }
