@@ -62,11 +62,11 @@ public class Game {
         int category;
         for (int i = 0; i < NO_OF_ROUNDS; i++) {
             category = pickCategory();
-            System.out.println("Γύρος νούμερο " + (i + 1) + " για την ομάδα " + name1);
+            System.out.println("Γύρος νούμενο " + (i + 1) + " για την ομάδα " + name1);
             var r1 = new Round(roundSeconds, category);
             r1.runRound();
             team1.addScore(r1.getRoundScore());
-            System.out.println("Γύρος νούμερο " + (i + 1) + " για την ομάδα " + name2);
+            System.out.println("Γύρος νούμενο " + (i + 1) + " για την ομάδα " + name2);
             var r2 = new Round(roundSeconds, category);
             r2.runRound();
             team2.addScore(r2.getRoundScore());

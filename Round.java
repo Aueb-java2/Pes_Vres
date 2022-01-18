@@ -18,7 +18,7 @@ public class Round {
 
 
     public void runRound() {
-        //database connection εμφάνιση ερωτησης / απάντησης ανάλογα με κατηγορίες
+        //ΕΜΦΑΝΙΣΗ ΕΡΩΤΗΣΗΣ kai apanthshs
         System.out.println("Πατήστε οποιοδήποτε πλήκτρο για να ξεκινήσει ο γύρος");
         Input.getStringInput();
         System.out.println("Έχεις " + roundSeconds + " δευτερόλεπτα");
