@@ -21,7 +21,12 @@ public class Countdown implements Runnable{
 
     public void run(){
         try{
-        	Driver.questionDB(catName);
+            try {
+                Driver.questionDB(catName);
+            } catch (Exception e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
         	Driver.answerDB(catName);
         	System.out.println("Ερώτηση: " + question);
         	for (int i = 0; i < answers.length; i++) {
