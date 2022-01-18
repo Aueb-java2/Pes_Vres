@@ -1,9 +1,7 @@
+import java.sql.SQLException;
+
 public class Main {
-  public static void main(String[] args) {
-    //Game game = new Game(60, "category1");
-    //game.runGame("gr", "rew");
-    //Round.runRound(5, "category");
-    //Round.runRound(10, "category");
+  public static void main(String[] args) throws SQLException {
     Menu menu = new Menu();
     menu.printHeader();
     int choice = -1;
