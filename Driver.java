@@ -2,26 +2,43 @@ import java.sql.*;
 
 public class Driver {
 
-	@SuppressWarnings("finally")
-	public static Statement connectToDB() throws SQLException {
-
-		Connection myConn = null;
-		Statement myStmt = null;
+	public static void questionDB(String s) throws SQLException {
 		
-			try {
-				myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/PesVres", "root" , "t8180046");
-				myStmt = myConn.createStatement();
+		try {
+			Connection myConn = DriverManager.getConnection(
+					"jdbc:mysql://prometheus.dmst.aueb.gr/stavros_pesvres",
+					"stavros" , "jihg76463");
+			PreparedStatement myStmt = myConn.prepareStatement("SELECT DISTINCT QuizQuestion "
+					+ "FROM Question "
+					+ "WHERE QuestionID = ?");
+			myStmt.setString(1, s);
+			ResultSet myRs = myStmt.executeQuery();
+			while (myRs.next()) {
+				Countdown.question = myRs.getString("QuizQuestion");
 			}
-			finally {
-				if (myConn != null) {
-					myConn.close();
-				}
-				
-				if (myStmt != null) {
-					myStmt.close();
-				}
-				return myStmt;
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}	
+	public static void answerDB(String s) throws SQLException {
+		
+		try {
+			Connection myConn = DriverManager.getConnection(
+					"jdbc:mysql://prometheus.dmst.aueb.gr/stavros_pesvres",
+					"stavros" , "jihg76463");
+			PreparedStatement myStmt = myConn.prepareStatement("SELECT DISTINCT Answer, Points "
+					+ "FROM Choice AS C, Question AS Q "
+					+ "WHERE C.QuestionID = Q.QuestionID AND Q.QuestionID = ?");
+			myStmt.setString(1, s);
+			ResultSet myRs = myStmt.executeQuery();
+			int i = 0;
+			while (myRs.next() && i < 10) {
+				Countdown.answers[i] = myRs.getString("Answer");
+				Countdown.points[i] = myRs.getInt("Points");
+				i++;
 			}
-	}		
-			
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}			
 }
