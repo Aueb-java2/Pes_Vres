@@ -3,7 +3,13 @@ import java.sql.*;
 public class Driver {
 
 	public static void questionDB(String s) throws SQLException {
-		
+		try {
+			Class.forName("com.mysql.jdbc.Driver").newInstance();  
+
+		} catch (Exception e) {
+
+			throw new Exception("MySQL Driver error: " + e.getMessage());
+		}
 		try {
 			Connection myConn = DriverManager.getConnection(
 					"jdbc:mysql://prometheus.dmst.aueb.gr/stavros_pesvres",
