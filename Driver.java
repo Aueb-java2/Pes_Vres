@@ -2,7 +2,7 @@ import java.sql.*;
 
 public class Driver {
 
-	public static void questionDB(String s) throws SQLException {
+	public static void questionDB(String s) throws Exception {
 		try {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();  
 
@@ -11,6 +11,7 @@ public class Driver {
 			throw new Exception("MySQL Driver error: " + e.getMessage());
 		}
 		try {
+			
 			Connection myConn = DriverManager.getConnection(
 					"jdbc:mysql://prometheus.dmst.aueb.gr/stavros_pesvres",
 					"stavros" , "jihg76463");
