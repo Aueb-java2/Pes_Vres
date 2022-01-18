@@ -57,17 +57,17 @@ public class Game {
     }
     
     public void runGame() {
-        var team1 = new Team(name1, 0);
-        var team2 = new Team(name2, 0);
+        Team team1 = new Team(name1, 0);
+        Team team2 = new Team(name2, 0);
         int category;
         for (int i = 0; i < NO_OF_ROUNDS; i++) {
             category = pickCategory();
             System.out.println("Γύρος νούμενο " + (i + 1) + " για την ομάδα " + name1);
-            var r1 = new Round(roundSeconds, category);
+            Round r1 = new Round(roundSeconds, category);
             r1.runRound();
             team1.addScore(r1.getRoundScore());
             System.out.println("Γύρος νούμενο " + (i + 1) + " για την ομάδα " + name2);
-            var r2 = new Round(roundSeconds, category);
+            Round r2 = new Round(roundSeconds, category);
             r2.runRound();
             team2.addScore(r2.getRoundScore());
         }
