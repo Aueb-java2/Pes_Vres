@@ -3,24 +3,24 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Countdown implements Runnable{
+public class Countdown implements Runnable {
 
     private int roundMilliSeconds;
 
     public int roundScore = 0;
     private String catName;
-    
+
     public static String question;
     public static int[] points = new int[10];
     public static String[] answers = new String[10];
 
-    public Countdown(int Seconds, Round r){
+    public Countdown(int Seconds, Round r) {
         this.roundMilliSeconds = Seconds * 1000;
         this.catName = r.catName;
     }
 
-    public void run(){
-        try{
+    public void run() {
+        try {
             try {
                 Driver.questionDB(catName);
             } catch (Exception e) {
@@ -58,7 +58,6 @@ public class Countdown implements Runnable{
             } else {
                 System.out.println("Απαντήσατε " + count + " ερωτήσεις...");
             }
-            System.out.println("Πήρατε " + roundscore + " σε αυτόν τον γύρο.");
         }catch(InterruptedException | IOException | SQLException e){
             System.out.println("Countdown interrupted");
         }
