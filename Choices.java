@@ -1,14 +1,24 @@
 public class Choices {
+
+    /*Name of the first team*/
     private String name1;
 
+    /*Name of the second team*/
     private String name2;
 
+    /*Seconds of each round that 
+    have been selected from the user*/
     private int roundSeconds;
 
+    /*Number of categories that 
+    have been selected from the user*/
     private int noOfCategories;
 
+    /*Categories that have been
+    selected from the user in order*/
     private int[] categories;
 
+    /*Prints and reads the choices of each game*/
     public void runChoices() {
         readNames();
         printSecondsChoices();
@@ -17,10 +27,13 @@ public class Choices {
         readCategories();
     }
 
+    /*Returns the categories in order*/
     public int[] getCategories() {
         return categories;
     }
 
+    /*Reads the categories of each round and
+    creates table categories[]*/
     private  void readCategories() {
         System.out.println("1. Ελληνική Μυθολογία");
         System.out.println("2. Ελληνικός Πολιτισμός");
@@ -41,37 +54,43 @@ public class Choices {
         }
     }
 
+    /*Returns the number of the categories given*/
     public int getNoOfCategories() {
         return noOfCategories;
     }
 
+    /*Reads the number of the categories*/
     private void readNoOfCategories() {
-        System.out.print("Παρακαλώ πληκτρολογήστε τον αριθμό των κατηγοριών...");
+        System.out.println("Παρακαλώ πληκτρολογήστε τον αριθμό των κατηγοριών...");
         noOfCategories = Input.getInput(1, 4);
     }
     
+    /*Reads the names of both teams*/
     private void readNames() {
-        System.out.print("Παρακαλώ πληκρολογήστε το όνομα της ομάδας1...\n");
+        System.out.println("Παρακαλώ πληκρολογήστε το όνομα της ομάδας1...");
         name1 = Input.getStringInput();
         System.out.println("Παρακαλώ πληκρολογήστε το όνομα της ομάδας2...");
         name2 = Input.getStringInput();
         
     }
 
+    /*Returns the name of the first team*/
     public  String getName1() {
         return name1;
     }
 
+    /*Returns the name of the second team*/
     public  String getName2() {
         return name2;
     }
 
+    /*Returns the seconds of each round given by the user*/
     public int  getRoundSeconds() {
         return roundSeconds;
     }
 
     private void printSecondsChoices() {
-        System.out.println("Παρακαλώ επιλέξτε τα δευτερόλεπτα κάθε γύρου...\n");
+        System.out.println("Παρακαλώ επιλέξτε τα δευτερόλεπτα κάθε γύρου...");
         System.out.println("1. 45 δευτερόλεπτα");
         System.out.println("2. 60 δευτερόλεπτα");
         System.out.println("3. 75 δευτερόλεπτα");
