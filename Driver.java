@@ -4,7 +4,7 @@ public class Driver {
 
 	public static void questionDB(String s) throws Exception {
 		try {
-			Class.forName("com.mysql.jdbc.Driver").newInstance();  
+			Class.forName("com.mysql.cj.jdbc.Driver");  
 
 		} catch (Exception e) {
 
