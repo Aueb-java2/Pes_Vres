@@ -1,8 +1,12 @@
 # ReadMe του παιχνιδιού Πες-Βρες
 
-# Οδηγίες μετταγλώτισης του προγράμματος
-
-Εxport Jar File from Eclipse
+#  Mετταγλώτιση Προγράμματος
+Χρησιμοποιήθηκε το package com.Pes-Vres.mavenproject
+Μ ε την επιλογή του σωστού archetype δημιουργήθηκε το αρχείο pom.xmlμε όλα τα απαραίτητα dependances 
+Οδηγίες μεταγλώτισης του προγράμματος
+From Eclipse import Projects from Git 
+Select new wisrd: Maven Project
+Add Archetype : ID: org.apache.maven.archetypes with maven-archetype-quickstart
 
 # Οδηγίες εκτέλεσης του προγράμματος
 
